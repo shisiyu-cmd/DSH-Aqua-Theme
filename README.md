@@ -16,29 +16,17 @@ A glassmorphism theme for the [DeepSeek Harness](https://github.com/deepseek-ai/
 
 Requires dsh `>=0.2.1-rc.0 <0.3.0`.
 
-### One command (recommended)
-
-**Linux / macOS / Git Bash**
-
 ```sh
-curl -L -o dsh-aqua-theme.tgz https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest/download/dsh-aqua-theme-1.3.1.tgz
-dsh plugin --profile desktop add ./dsh-aqua-theme.tgz
-```
-
-**Windows PowerShell**
-
-```powershell
-Invoke-WebRequest -Uri "https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest/download/dsh-aqua-theme-1.3.1.tgz" -OutFile dsh-aqua-theme.tgz
-dsh plugin --profile desktop add ./dsh-aqua-theme.tgz
+dsh plugin --profile desktop add dsh-aqua-theme
 ```
 
 Restart DSH afterwards. The theme appears under **Settings → General → Aqua**.
 
-### Manual download
+### From a local tarball
 
-1. Open the [latest release](https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest)
-2. Download `dsh-aqua-theme-1.3.1.tgz` from **Assets**
-3. Open a terminal in the folder that contains the file and run:
+If you prefer to inspect the code first, grab the tarball from the
+[latest release](https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest)
+and install it by path:
 
 ```sh
 dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz

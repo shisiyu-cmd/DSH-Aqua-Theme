@@ -16,29 +16,16 @@
 
 需要 dsh `>=0.2.1-rc.0 <0.3.0`。
 
-### 一键安装（推荐）
-
-**Windows PowerShell**
-
-```powershell
-Invoke-WebRequest -Uri "https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest/download/dsh-aqua-theme-1.3.1.tgz" -OutFile dsh-aqua-theme.tgz
-dsh plugin --profile desktop add ./dsh-aqua-theme.tgz
-```
-
-**Linux / macOS / Git Bash**
-
 ```sh
-curl -L -o dsh-aqua-theme.tgz https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest/download/dsh-aqua-theme-1.3.1.tgz
-dsh plugin --profile desktop add ./dsh-aqua-theme.tgz
+dsh plugin --profile desktop add dsh-aqua-theme
 ```
 
 安装后重启 DSH。主题入口在 **设置 → 通用 → Aqua**。
 
-### 手动下载
+### 用本地 tgz 安装
 
-1. 打开 [最新 Release](https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest)
-2. 在 **Assets** 里下载 `dsh-aqua-theme-1.3.1.tgz`
-3. 在文件所在目录打开终端，执行：
+想先看代码的话，可以从 [最新 Release](https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest)
+下载 tgz，再按路径安装：
 
 ```sh
 dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz
