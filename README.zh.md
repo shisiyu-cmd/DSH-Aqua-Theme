@@ -14,11 +14,37 @@
 
 ## 安装
 
-本插件尚未发布到 npm。请从 [最新 Release](https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest) 下载 tgz 包后直接安装：
+需要 dsh `>=0.2.1-rc.0 <0.3.0`。
+
+### 一键安装（推荐）
+
+**Windows PowerShell**
+
+```powershell
+Invoke-WebRequest -Uri "https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest/download/dsh-aqua-theme-1.3.1.tgz" -OutFile dsh-aqua-theme.tgz
+dsh plugin --profile desktop add ./dsh-aqua-theme.tgz
+```
+
+**Linux / macOS / Git Bash**
+
+```sh
+curl -L -o dsh-aqua-theme.tgz https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest/download/dsh-aqua-theme-1.3.1.tgz
+dsh plugin --profile desktop add ./dsh-aqua-theme.tgz
+```
+
+安装后重启 DSH。主题入口在 **设置 → 通用 → Aqua**。
+
+### 手动下载
+
+1. 打开 [最新 Release](https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest)
+2. 在 **Assets** 里下载 `dsh-aqua-theme-1.3.1.tgz`
+3. 在文件所在目录打开终端，执行：
 
 ```sh
 dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz
 ```
+
+> `./` 不能省。`dsh plugin add` 会转发给 pnpm，不带路径前缀会被当成 npm 包名去仓库里找。
 
 ### 从源码构建
 
@@ -28,13 +54,6 @@ cd DSH-Aqua-Theme
 pnpm pack
 dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz
 ```
-
-安装后重启 DSH。主题入口在 **设置 → 通用 → Aqua**。
-
-### 环境要求
-
-- dsh `>=0.2.1-rc.0 <0.3.0`
-- 桌面端或 Web 端
 
 ## 壁纸模式的层级
 

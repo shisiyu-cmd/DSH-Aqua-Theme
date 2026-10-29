@@ -14,13 +14,37 @@ A glassmorphism theme for the [DeepSeek Harness](https://github.com/deepseek-ai/
 
 ## Install
 
-This package is not on npm yet. Download the tarball from the
-[latest release](https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest)
-and install it directly:
+Requires dsh `>=0.2.1-rc.0 <0.3.0`.
+
+### One command (recommended)
+
+**Linux / macOS / Git Bash**
+
+```sh
+curl -L -o dsh-aqua-theme.tgz https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest/download/dsh-aqua-theme-1.3.1.tgz
+dsh plugin --profile desktop add ./dsh-aqua-theme.tgz
+```
+
+**Windows PowerShell**
+
+```powershell
+Invoke-WebRequest -Uri "https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest/download/dsh-aqua-theme-1.3.1.tgz" -OutFile dsh-aqua-theme.tgz
+dsh plugin --profile desktop add ./dsh-aqua-theme.tgz
+```
+
+Restart DSH afterwards. The theme appears under **Settings → General → Aqua**.
+
+### Manual download
+
+1. Open the [latest release](https://github.com/shisiyu-cmd/DSH-Aqua-Theme/releases/latest)
+2. Download `dsh-aqua-theme-1.3.1.tgz` from **Assets**
+3. Open a terminal in the folder that contains the file and run:
 
 ```sh
 dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz
 ```
+
+> The `./` matters. `dsh plugin add` forwards to pnpm, which treats a bare name as a registry package.
 
 ### Build from source
 
@@ -30,13 +54,6 @@ cd DSH-Aqua-Theme
 pnpm pack
 dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz
 ```
-
-Restart DSH afterwards. The theme appears under **Settings → General → Aqua**.
-
-### Requirements
-
-- dsh `>=0.2.1-rc.0 <0.3.0`
-- Desktop or Web surface
 
 ## Wallpaper mode
 
