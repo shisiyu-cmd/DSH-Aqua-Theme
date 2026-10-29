@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build output
+dist/
+*.tgz
+
+# editor / OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+.idea/
+.vscode/
+
+# local scratch
+.dbg/
+*.png
+!assets/*.png
