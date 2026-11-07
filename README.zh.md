@@ -4,6 +4,20 @@
 
 > **这是 fork。** 原主题来自 [WYH66666666/DSH-Transparent-UI-Plugin](https://github.com/WYH66666666/DSH-Transparent-UI-Plugin)。本 fork 修复了对 dsh `0.2.1-rc.3` 的兼容性，并重做了壁纸模式。详见[本 fork 的改动](#本-fork-的改动)。
 
+## 截图
+
+深色模式下盖在动态流体背景上，以及同一页面的浅色模式：
+
+![Aqua 深色模式，动态流体背景](docs/screenshots/dark-fluid.webp)
+
+![Aqua 浅色模式，动态流体背景](docs/screenshots/light-fluid.webp)
+
+输入框和状态栏有自己的磨砂玻璃，明暗两套配色分别调过：
+
+| 输入框，浅色 | 输入框，深色 |
+|---|---|
+| ![浅色模式下的输入框](docs/screenshots/composer-light.webp) | ![深色模式下的输入框](docs/screenshots/composer-dark.webp) |
+
 ## 特性
 
 - **两种背景** — 动态流体面板，或你自己的照片／视频壁纸
@@ -28,7 +42,7 @@ dsh plugin --profile desktop add dsh-aqua-theme
 下载 tgz，再按路径安装：
 
 ```sh
-dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz
+dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.2.tgz
 ```
 
 > `./` 不能省。`dsh plugin add` 会转发给 pnpm，不带路径前缀会被当成 npm 包名去仓库里找。
@@ -39,7 +53,7 @@ dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz
 git clone https://github.com/shisiyu-cmd/DSH-Aqua-Theme.git
 cd DSH-Aqua-Theme
 pnpm pack
-dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz
+dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.2.tgz
 ```
 
 ## 壁纸模式的层级

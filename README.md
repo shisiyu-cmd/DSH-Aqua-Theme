@@ -4,6 +4,20 @@ A glassmorphism theme for the [DeepSeek Harness](https://github.com/deepseek-ai/
 
 > **This is a fork.** The original theme is [WYH66666666/DSH-Transparent-UI-Plugin](https://github.com/WYH66666666/DSH-Transparent-UI-Plugin). This fork fixes compatibility with dsh `0.2.1-rc.3` and rebuilds wallpaper mode. See [Changes](#changes-in-this-fork).
 
+## Screenshots
+
+Dark mode over the animated fluid backdrop, and the same page in light mode:
+
+![Aqua in dark mode, animated fluid backdrop](docs/screenshots/dark-fluid.webp)
+
+![Aqua in light mode, animated fluid backdrop](docs/screenshots/light-fluid.webp)
+
+The composer and status bar get their own frosted glass, tuned per palette:
+
+| Glass composer, light | Glass composer, dark |
+|---|---|
+| ![Glass composer in light mode](docs/screenshots/composer-light.webp) | ![Glass composer in dark mode](docs/screenshots/composer-dark.webp) |
+
 ## Features
 
 - **Two backdrop modes** — a live fluid board, or your own photo / video wallpaper
@@ -29,7 +43,7 @@ If you prefer to inspect the code first, grab the tarball from the
 and install it by path:
 
 ```sh
-dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz
+dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.2.tgz
 ```
 
 > The `./` matters. `dsh plugin add` forwards to pnpm, which treats a bare name as a registry package.
@@ -40,7 +54,7 @@ dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz
 git clone https://github.com/shisiyu-cmd/DSH-Aqua-Theme.git
 cd DSH-Aqua-Theme
 pnpm pack
-dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.1.tgz
+dsh plugin --profile desktop add ./dsh-aqua-theme-1.3.2.tgz
 ```
 
 ## Wallpaper mode
