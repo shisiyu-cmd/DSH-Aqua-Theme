@@ -6,11 +6,11 @@ A glassmorphism theme for the [DeepSeek Harness](https://github.com/deepseek-ai/
 
 ## Features
 
-- **Two backdrop modes** 鈥?a live fluid board, or your own photo / video wallpaper
-- **Frosted glass everywhere** 鈥?sidebar, header, composer and message bubbles each get their own translucency and blur
-- **Readable on any photo** 鈥?white text with a hard dark outline plus a soft drop shadow, so glyphs separate from both bright skies and dark rock
-- **Static mode** 鈥?the animated backdrop can be turned off entirely; GPU use drops to roughly the level of running no theme at all
-- **Light and dark palettes** 鈥?both work in every mode
+- **Two backdrop modes** — a live fluid board, or your own photo / video wallpaper
+- **Frosted glass everywhere** — sidebar, header, composer and message bubbles each get their own translucency and blur
+- **Readable on any photo** — white text with a hard dark outline plus a soft drop shadow, so glyphs separate from both bright skies and dark rock
+- **Static mode** — the animated backdrop can be turned off entirely; GPU use drops to roughly the level of running no theme at all
+- **Light and dark palettes** — both work in every mode
 
 ## Install
 
@@ -49,15 +49,15 @@ When a photo or video is active, the layers stack like this:
 
 | Layer | Element | Opacity | Blur |
 |---|---|---|---|
-| 0 | photo / video | 100% | 鈥?|
-| 鈥?| scrim | **0%** (none) | 鈥?|
-| 1 | centre column (chat) | 0% | 鈥?|
+| 0 | photo / video | 100% | — |
+| — | scrim | **0%** (none) | — |
+| 1 | centre column (chat) | 0% | — |
 | 2 | sidebar | 42% | 2px |
 | 3 | header | 30% | 2px |
 | 3 | composer | 38% | 2px |
 | 4 | message bubbles | 45% | 20px |
 
-The centre column is fully transparent so the wallpaper reads through; text sits directly on the photo and relies on its outline for contrast. Photo and video share one rule set 鈥?only the bottom layer differs.
+The centre column is fully transparent so the wallpaper reads through; text sits directly on the photo and relies on its outline for contrast. Photo and video share one rule set — only the bottom layer differs.
 
 ## Performance
 
@@ -77,13 +77,14 @@ Video wallpapers additionally cost video-decode time, independent of CSS.
 
 The upstream package targets an older dsh. This fork fixes:
 
-1. **`cordis.patch.yml` was missing from the published tarball** 鈥?upstream listed `dsh.bundle.patch` but omitted the file from `files[]`, so `dsh plugin add` installed a package that could not boot.
-2. **`@deepseek-ai/dsh-client-runtime` no longer exists** 鈥?`defineStore` now comes from `@deepseek-ai/dsh-client-store`.
-3. **`IconCheckOutline16` 鈫?`IconCheckOutlineMedium`** 鈥?icons gained size suffixes.
-4. **`settings.plugin.item` 鈫?`settings.plugins.tab`** 鈥?the plugins settings page became a tab list and each contribution needs a `label`.
-5. **`peerDependencies` replaced by `engines.dsh`** 鈥?the old peer ranges never satisfied `0.2.1-rc.3`, which made dsh disable the plugin at startup.
-6. **Wallpaper mode rebuilt** 鈥?the previous implementation left the chat column transparent with nothing behind it, and the video element was appended to `<html>` (covering the entire UI). Both fixed.
-7. **Toggle button contrast** 鈥?the ON state was `#6E9BE8` on `#1D2C44` (鈮?.4:1). Now a filled accent pill with white text.
+1. **`cordis.patch.yml` was missing from the published tarball** — upstream listed `dsh.bundle.patch` but omitted the file from `files[]`, so `dsh plugin add` installed a package that could not boot.
+2. **`@deepseek-ai/dsh-client-runtime` no longer exists** — `defineStore` now comes from `@deepseek-ai/dsh-client-store`.
+3. **`IconCheckOutline16` → `IconCheckOutlineMedium`** — icons gained size suffixes.
+4. **`settings.plugin.item` → `settings.plugins.tab`** — the plugins settings page became a tab list and each contribution needs a `label`.
+5. **`peerDependencies` replaced by `engines.dsh`** — the old peer ranges never satisfied `0.2.1-rc.3`, which made dsh disable the plugin at startup.
+6. **Wallpaper mode rebuilt** — the previous implementation left the chat column transparent with nothing behind it, and the video element was appended to `<html>` (covering the entire UI). Both fixed.
+7. **Toggle button contrast** — the ON state was `#6E9BE8` on `#1D2C44` (≈2.4:1). Now a filled accent pill with white text.
+8. **Light mode painted the whole UI blue** — the wallpaper layer was created on every mount with an unconditional dark `#0b1220` fill, and `html` referenced a background token that is only defined on `body`, so it resolved to transparent. Both fixed.
 
 ## Development
 
@@ -93,4 +94,4 @@ If you rebuild from source, re-apply the changes above.
 
 ## License
 
-MIT. Original work 漏 John Wu; fork modifications released under the same licence.
+MIT. Original work © John Wu; fork modifications released under the same licence.
